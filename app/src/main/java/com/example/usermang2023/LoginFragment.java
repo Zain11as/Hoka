@@ -110,7 +110,9 @@ public class LoginFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // TODO: decide what to do
-                            Toast.makeText(getActivity(), "Succ", Toast.LENGTH_SHORT).show();
+                            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.frameLayoutMain, new AddUserFragment());
+                            ft.commit();
                         } else {
                             Toast.makeText(getActivity(), "Failed to Login! check user or password", Toast.LENGTH_SHORT).show();
                         }

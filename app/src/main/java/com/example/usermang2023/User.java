@@ -8,6 +8,7 @@ public class User {
     private String Jobyouneed;
     private String phone;
 
+    public User(){}
     public User(String city,String Firstname, String Lastname, String country,String Jobyouneed,String phone) {
         this.city = city;
         this.Firstname = Firstname;
