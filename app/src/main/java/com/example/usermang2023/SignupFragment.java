@@ -1,5 +1,6 @@
 package com.example.usermang2023;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -100,8 +101,9 @@ public class SignupFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             // TODO: decide what to do
+
                             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                                ft.replace(R.id.frameLayoutMain, new AddUserFragment());
+                                ft.replace(R.id.container, new AddUserFragment());
                                 ft.commit();
 
                         }

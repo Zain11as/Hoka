@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutusFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/abour"
+            android:layout_width="354dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="21dp"
+            android:text="About our aplication"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/maintx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/maintx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="196dp"
+            android:text=" Free volunteer abroad programs are the best way to experience meaningful travel opportunities when you are on a budget. Cheap or even free volunteer opportunities can make an impact as big as any other program and is a great option for volunteers willing to go back to basics. Volunteering abroad gives you the chance to meet locals while you work for affordable or even free projects.  Cheap and even free volunteering programs are everywhere. A budget doesn't need to hold you back from volunteering and traveling abroad! According to a Stanford university research 92% of young adults between the age 18-23 wants to travel abroad, with our program we can provide them that, volunteering abroad is a great experience to learn about new cultures, developing your character and your way of thinking. Through this application we will not just help our users to travel abroad and learn about new cultures, also we will provide help to people who are in need through our users. "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abour" />
+
+        <Button
+            android:id="@+id/gotoprofile"
+            android:layout_width="205dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="596dp"
+            android:text="Go to profile"
+            app:iconTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="204dp"
+            android:layout_height="173dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/screen_shot_2023_06_08_at_11_30_01"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

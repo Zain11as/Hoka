@@ -14,12 +14,13 @@
             android:id="@+id/etUsernameLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="208dp"
             android:ems="10"
             android:hint="username.."
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="@+id/etPasswordLogin"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/etPasswordLogin"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +28,8 @@
             android:id="@+id/etPasswordLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="66dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="52dp"
             android:ems="10"
             android:hint="password..."
             android:inputType="textPassword"
@@ -50,10 +51,38 @@
             android:id="@+id/tvSignupLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:text="Sign up..."
             app:layout_constraintStart_toStartOf="@+id/btnLoginLogin"
             app:layout_constraintTop_toBottomOf="@+id/btnLoginLogin" />
+
+        <TextView
+            android:id="@+id/tvfg"
+            android:layout_width="152dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="596dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="99dp"
+            android:text="Forgot password?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="245dp"
+            android:layout_height="154dp"
+            android:layout_marginBottom="580dp"
+            android:src="@drawable/screen_shot_2023_06_08_at_11_30_01"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </FrameLayout>

@@ -7,17 +7,31 @@ public class User {
     private String city;
     private String Jobyouneed;
     private String phone;
+    private String gmail;
+
 
     public User(){}
-    public User(String city,String Firstname, String Lastname, String country,String Jobyouneed,String phone) {
+    public User(String city,String Firstname, String Lastname, String country,String Jobyouneed,String phone,String gmail) {
         this.city = city;
         this.Firstname = Firstname;
         this.Lastname = Lastname;
         this.country = country;
         this.Jobyouneed = Jobyouneed;
         this.phone = phone;
+        this.gmail=gmail;
+
 
     }
+
+    public String getGmail() {
+        return gmail;
+    }
+
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
+    }
+
+
 
     public String getCity() {
         return city;

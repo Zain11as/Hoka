@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ public class ForgotpasswordFragment extends Fragment {
 
     private FirebaseService fbs;
     private EditText etEmail;
-    private Button btnReset;
+    private Button btnReset, ret;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -84,6 +85,7 @@ public class ForgotpasswordFragment extends Fragment {
         fbs = FirebaseService.getInstance();
         etEmail = getView().findViewById(R.id.etEmailForgotpass);
         btnReset = getView().findViewById(R.id.btnResetForgotpass);
+        ret=getView().findViewById(R.id.Return);
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +105,15 @@ public class ForgotpasswordFragment extends Fragment {
 
             }
 
+        });
+        ret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, new LoginFragment());
+                ft.commit();
+            }
         });
     }
 }

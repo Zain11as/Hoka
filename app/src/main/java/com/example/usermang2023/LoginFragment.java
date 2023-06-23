@@ -1,5 +1,6 @@
 package com.example.usermang2023;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ import com.google.firebase.auth.AuthResult;
 public class LoginFragment extends Fragment {
 
     private EditText etUsername,etPassword;
-    private TextView tvSignupLink;
+    private TextView tvSignupLink,tvpass;
     private Button btnLogin;
     private FirebaseService fbs;
 
@@ -84,6 +85,7 @@ public class LoginFragment extends Fragment {
         etUsername=getView().findViewById(R.id.etUsernameLogin);
         etPassword=getView().findViewById(R.id.etPasswordLogin);
         btnLogin=getView().findViewById(R.id.btnLoginLogin);
+        tvpass=getView().findViewById(R.id.tvfg);
         tvSignupLink=getView().findViewById(R.id.tvSignupLogin);
         tvSignupLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,8 +93,17 @@ public class LoginFragment extends Fragment {
                 gotoSignupFragment();
 
             }
-        });
 
+         });
+
+        tvpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.container, new ForgotpasswordFragment());
+                ft.commit();
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +111,7 @@ public class LoginFragment extends Fragment {
                 //Data validation
                 String username=etUsername.getText().toString();
                 String password=etPassword.getText().toString();
+
                 if(username.trim().isEmpty() && password.trim().isEmpty()){
                     Toast.makeText(getActivity(), "Some fields ar Empty", Toast.LENGTH_SHORT).show();
                     return;
@@ -110,9 +122,13 @@ public class LoginFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // TODO: decide what to do
+                            Intent intent = new Intent(getActivity(), StartActivity.class);
+                            startActivity(intent);
+
+                            /*
                             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.frameLayoutMain, new AddUserFragment());
-                            ft.commit();
+                            ft.replace(R.id.container, new AddprogramFragment());
+                             */
                         } else {
                             Toast.makeText(getActivity(), "Failed to Login! check user or password", Toast.LENGTH_SHORT).show();
                         }
@@ -125,7 +141,7 @@ public class LoginFragment extends Fragment {
 
     private void gotoSignupFragment() {
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frameLayoutMain, new SignupFragment());
+        ft.replace(R.id.container, new SignupFragment());
         ft.commit();
     }
 }
